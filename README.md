@@ -173,3 +173,29 @@ Config.useCluster : This is experimented parameter. We will announce when it wor
 
 Config.robotUserId : Create user who you want use for webhooks.
 
+
+Build instructions
+Here is step by step instruction to setup development environment of frontend. Before doing this all our clients have to buy license and we provice access permission to our github private repository.
+
+Clone from repository
+You will have your own repository. So please change this url part.
+
+$ git clone https://github.com/cloverstudio/SFB_Server.git
+Install libraries
+$ cd SFB_Serve
+$ npm install
+Edit config file
+$ cp src/client/js/lib/init-sample.js src/client2/js/lib/config.js 
+$ vim  src/client/js/lib/config.js
+In production you will need only change these configurations.
+
+hashSalt: "",
+AESPassword: ""
+Debug frontend
+$ npm start
+Then you can debug frontend by opening http://localhost:3000
+
+Build source code
+$ npm run build
+
+
